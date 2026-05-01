@@ -104,6 +104,7 @@ You can refer to the following links to download the datasets.
 
 ### Recommended Directory Structure
 <details close> <summary>datasets (click to expand)</summary>
+
 ```
 ├── datasets
 	├── DICM
