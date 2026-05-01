@@ -102,9 +102,6 @@ You can refer to the following links to download the datasets.
 - SICE: [Baidu Pan](https://pan.baidu.com/s/13ghnpTBfDli3mAzE3vnwHg?pwd=yixu)(code: `yixu`) and [One Drive](https://1drv.ms/u/s!AoPRJmiD24UphAlaTIekdMLwLZnA?e=WxrfOa)(code: `yixu`)
 - Sony-Total-Dark(SID): [Baidu Pan](https://pan.baidu.com/s/1mpbwVscbAfQJtkrrzBzJng?pwd=yixu)(code: `yixu`) and [One Drive](https://1drv.ms/u/s!AoPRJmiD24UphAie9l0DuMN20PB7?e=Zc5DcA)(code: `yixu`)
 
-
-Then, put them in the following folder:
-
 ### Recommended Directory Structure
 
 ```text
@@ -177,97 +174,42 @@ Then, put them in the following folder:
 
 ## 🚀 Getting Started
 
-### 1. Training
-
-Train DCWNet on a paired dataset:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python train.py \
-  --dataset LOLv1 \
-  --data_root ./datasets/LOLv1 \
-  --save_dir ./experiments/dcwnet_lolv1 \
-  --batch_size 4 \
-  --patch_size 256 \
-  --lr 1e-4
-```
-
-Train on LOLv2-synthetic:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python train.py \
-  --dataset LOLv2-synthetic \
-  --data_root ./datasets/LOLv2-synthetic \
-  --save_dir ./experiments/dcwnet_lolv2_syn \
-  --batch_size 4 \
-  --patch_size 256 \
-  --lr 1e-4
-```
-
-Resume training from a checkpoint:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python train.py \
-  --dataset LOLv1 \
-  --data_root ./datasets/LOLv1 \
-  --save_dir ./experiments/dcwnet_lolv1 \
-  --resume ./experiments/dcwnet_lolv1/checkpoints/latest.pth
-```
 
 ### 2. Testing
 
-Evaluate a trained model on paired test data:
+Download our weights from [[Google Drive](https://drive.google.com/drive/folders/1bHNXq-3nSxh0QeyeG4dqcxtXw-Y-JbUY?usp=drive_link)]
+
+- **You can test our HVI-CIDNet+ as followed, all the results will saved in `./output` folder:**
+
+<details close> <summary>(click to expand)</summary>
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python test.py \
-  --data_root ./datasets/LOLv1/test \
-  --checkpoint ./checkpoints/dcwnet_lolv1.pth \
-  --result_dir ./results/LOLv1
+# LOLv1
+python eval.py --lol
+
+# LOLv2-real
+python eval.py --lol_v2_real
+
+# LOLv2-syn
+python eval.py --lol_v2_syn
+
+# SICE
+python eval.py --sice
+
+# Sony-Total-Dark
+python eval_SID.py
+
+# five unpaired datasets DICM, LIME, MEF, NPE, VV. 
+# You can change "--DICM" to the other unpaired datasets "LIME, MEF, NPE, VV".
+python eval_unpaired.py --unpaired --DICM
 ```
 
-Evaluate on unpaired datasets:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python test_unpaired.py \
-  --input_dir ./datasets/unpaired/DICM \
-  --checkpoint ./checkpoints/dcwnet_lolv2_syn.pth \
-  --result_dir ./results/DICM
+</details>
 ```
 
-### 3. Inference on Custom Images
+### 2. Training
 
-```bash
-CUDA_VISIBLE_DEVICES=0 python inference.py \
-  --input ./examples/input \
-  --checkpoint ./checkpoints/dcwnet.pth \
-  --output ./examples/output
-```
-
-### 4. Optional Gradio Demo
-
-```bash
-python app.py --checkpoint ./checkpoints/dcwnet.pth
-```
-
----
-
-## 📦 Pretrained Models
-
-| Model | Training Dataset | Download |
-|-------|------------------|----------|
-| DCWNet-LOLv1 | LOLv1 | Coming soon |
-| DCWNet-LOLv2-real | LOLv2-real | Coming soon |
-| DCWNet-LOLv2-synthetic | LOLv2-synthetic | Coming soon |
-
-Place downloaded checkpoints under:
-
-```text
-checkpoints/
-├── dcwnet_lolv1.pth
-├── dcwnet_lolv2_real.pth
-└── dcwnet_lolv2_syn.pth
-```
-
----
+The training code will be uploaded soon.
 
 ## ✨ Qualitative Results
 
@@ -275,7 +217,7 @@ checkpoints/
 <summary><strong>LOLv1 Results</strong></summary>
 <br>
 <p align="center">
-  <img src="figs/lolv1.png" width="900" alt="Qualitative results on LOLv1">
+  <img src="figs/LOLv1.png" width="900" alt="Qualitative results on LOLv1">
 </p>
 </details>
 
@@ -283,7 +225,7 @@ checkpoints/
 <summary><strong>LOLv2 Results</strong></summary>
 <br>
 <p align="center">
-  <img src="figs/lolv2.png" width="900" alt="Qualitative results on LOLv2">
+  <img src="figs/LOLv2r_s.png" width="900" alt="Qualitative results on LOLv2">
 </p>
 </details>
 
@@ -291,7 +233,7 @@ checkpoints/
 <summary><strong>Unpaired Dataset Results</strong></summary>
 <br>
 <p align="center">
-  <img src="figs/unpaired.png" width="900" alt="Qualitative results on unpaired datasets">
+  <img src="figs/unpair.png" width="900" alt="Qualitative results on unpaired datasets">
 </p>
 </details>
 
