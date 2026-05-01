@@ -169,7 +169,7 @@ You can refer to the following links to download the datasets.
 				...
 	├── VV
 ```
-
+</details>
 ---
 
 ## 🚀 Getting Started
