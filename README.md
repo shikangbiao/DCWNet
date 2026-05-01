@@ -271,8 +271,6 @@ This repository is built upon the low-light image enhancement community and rela
 
 ---
 
----
-
 ## 🔆 Contact
 
 For questions, please open an issue or contact:
