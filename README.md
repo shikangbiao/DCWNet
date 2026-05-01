@@ -170,14 +170,13 @@ You can refer to the following links to download the datasets.
 	├── VV
 ```
 </details>
----
 
 ## 🚀 Getting Started
 
 
 ### 2. Testing
 
-Download our weights from [[Google Drive](https://drive.google.com/drive/folders/1bHNXq-3nSxh0QeyeG4dqcxtXw-Y-JbUY?usp=drive_link)]
+Download our weights from [[Google Drive](https://drive.google.com/drive/folders/1Qvayx4F8DoFft5FC9q3-iZYH74-ctJgl?usp=drive_link)]
 
 - **You can test DCWNet as follows, all the results will be saved in the `./output` folder:**
 
