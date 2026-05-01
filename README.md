@@ -36,8 +36,10 @@ To address these challenges, we introduce **DCWNet**, a novel two-branch LLIE fr
 
 ## 📖 Method Overview
 
-DCWNet contains two complementary branches:
-
+ **Overview of DCWNet:**
+<p align="center">
+  <img src="figs/Overall network diagram.pdf" width="900" alt="DCWNet Architecture">
+</p>
 - **HV-branch for color restoration**
   - Bright Codebook for reliable normal-light color prototypes
   - Dark Codebook for severely underexposed regions
@@ -48,10 +50,6 @@ DCWNet contains two complementary branches:
   - Frequency-Decoupled Wavelet Transform (FDWT)
   - Cross-Frequency Interaction Guided Enhancement (CFIGE)
   - Adaptive Illumination-Aware Low-Frequency Optimizer (AILO)
-
-<p align="center">
-  <img src="figs/overview.png" width="900" alt="DCWNet Architecture">
-</p>
 
 ---
 
