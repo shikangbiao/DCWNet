@@ -8,7 +8,7 @@
 ---
 
 > **Kangbiao Shi**<sup>1</sup>, **Zhaokun He**<sup>1</sup>, **Anh-Dzung Doan**<sup>2</sup>, **Li Yan**<sup>1*</sup>, **Qingsen Yan**<sup>1,3*</sup>  
-> <sup>1</sup>Northwestern Polytechnical University &nbsp; <sup>2</sup>The University of Adelaide &nbsp; <sup>4</sup>Shenzhen Research Institute of Northwestern Polytechnical University  
+> <sup>1</sup>Northwestern Polytechnical University &nbsp; <sup>2</sup>The University of Adelaide &nbsp; <sup>3</sup>Shenzhen Research Institute of Northwestern Polytechnical University  
 > <sup>*</sup>Corresponding Authors
 
 <p align="center">
