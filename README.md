@@ -38,8 +38,9 @@ To address these challenges, we introduce **DCWNet**, a novel two-branch LLIE fr
 
  **Overview of DCWNet:**
 <p align="center">
-  <img src="figs/Overall network diagram.pdf" width="900" alt="DCWNet Architecture">
+  <img src="figs/network.png" width="900" alt="DCWNet Architecture">
 </p>
+
 - **HV-branch for color restoration**
   - Bright Codebook for reliable normal-light color prototypes
   - Dark Codebook for severely underexposed regions
