@@ -104,7 +104,7 @@ You can refer to the following links to download the datasets.
 
 ### Recommended Directory Structure
 <details close> <summary>datasets (click to expand)</summary>
-```text
+```
 ├── datasets
 	├── DICM
 	├── LIME
@@ -204,7 +204,6 @@ python eval_unpaired.py --unpaired --DICM
 ```
 
 </details>
-```
 
 ### 2. Training
 
