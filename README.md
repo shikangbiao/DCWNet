@@ -8,8 +8,7 @@
 ---
 
 > **Kangbiao Shi**<sup>1</sup>, **Zhaokun He**<sup>1</sup>, **Anh-Dzung Doan**<sup>2</sup>, **Li Yan**<sup>1*</sup>, **Qingsen Yan**<sup>1,3*</sup>  
-> <sup>1</sup>Northwestern Polytechnical University &nbsp; <sup>2</sup>The University of Adelaide &nbsp; <sup>3</sup>Shenzhen Research Institute of Northwestern Polytechnical University  
-> <sup>*</sup>Corresponding Authors
+> <sup>1</sup>Northwestern Polytechnical University &nbsp; <sup>2</sup>The University of Adelaide &nbsp; <sup>3</sup>Shenzhen Research Institute of Northwestern Polytechnical University> <sup>*</sup>Corresponding Authors
 
 <p align="center">
   <a href="#">📜 Paper</a> |
@@ -22,9 +21,9 @@
 
 ## 📋 Abstract
 
-Low-Light Image Enhancement (LLIE) aims to improve the visual quality of images captured under poor illumination. Existing methods often apply uniform enhancement to the whole image, which may cause color distortion, noise amplification, and uneven exposure. To address these issues, we propose **DCWNet**, a two-branch low-light image enhancement framework built in the **HVI color space**.
 
-DCWNet reconstructs the HV color map with a **dual-codebook strategy**, where a **Bright Codebook** provides stable color prototypes from normal-light images and a **Dark Codebook** adaptively captures chromatic distributions in severely underexposed regions. A **Context-Aware Module (CAM)** and uncertainty-guided fusion further improve spatial consistency and suppress artifacts. For illumination enhancement, DCWNet introduces a **Frequency-Decoupled Wavelet Transform (FDWT)** module, which separately optimizes low- and high-frequency components to preserve details and alleviate local overexposure/underexposure. Extensive experiments on ten benchmark datasets demonstrate that DCWNet achieves state-of-the-art performance.
+Low-Light Image Enhancement (LLIE) aims to improve the visual quality of images degraded by poor illumination. Existing LLIE methods often apply uniform enhancement across the entire image, ignoring the intricate coupling between illumination and color, which leads to color distortion and uneven exposure. Recent HVI-based approaches decouple illumination and color, but they still struggle in extremely dark regions, where the chroma signal is severely attenuated and dominated by noise, resulting in reduced color discriminability and residual artifacts. 
+To address these challenges, we introduce **DCWNet**, a novel two-branch LLIE framework in the HVI color space. Specifically, the HV-branch reconstructs the HV color map using a **dual-codebook** strategy: a Bright Codebook for stable, natural-light colors, and a Dark Codebook that adaptively captures chromatic distributions in dark regions. The **Context-Aware Module** further enhances spatial consistency, while an **uncertainty-guided fusion mechanism** focuses on high-entropy regions, jointly suppressing noise and correcting global color bias. In the I-branch, a **Frequency-Decoupled Wavelet Transform** module decomposes the intensity map into high- and low-frequency components for separate processing. By preserving fine details and texture information, it effectively alleviates local overexposure and underexposure through region-aware brightness optimization. Extensive experiments on ten benchmark datasets demonstrate that DCWNet outperforms state-of-the-art LLIE methods.
 
 ---
 
