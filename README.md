@@ -103,7 +103,7 @@ You can refer to the following links to download the datasets.
 - Sony-Total-Dark(SID): [Baidu Pan](https://pan.baidu.com/s/1mpbwVscbAfQJtkrrzBzJng?pwd=yixu)(code: `yixu`) and [One Drive](https://1drv.ms/u/s!AoPRJmiD24UphAie9l0DuMN20PB7?e=Zc5DcA)(code: `yixu`)
 
 ### Recommended Directory Structure
-
+<details close> <summary>datasets (click to expand)</summary>
 ```text
 ├── datasets
 	├── DICM
@@ -179,7 +179,7 @@ You can refer to the following links to download the datasets.
 
 Download our weights from [[Google Drive](https://drive.google.com/drive/folders/1bHNXq-3nSxh0QeyeG4dqcxtXw-Y-JbUY?usp=drive_link)]
 
-- **You can test our HVI-CIDNet+ as followed, all the results will saved in `./output` folder:**
+- **You can test DCWNet as follows, all the results will be saved in the `./output` folder:**
 
 <details close> <summary>(click to expand)</summary>
 
@@ -265,43 +265,6 @@ The training code will be uploaded soon.
 
 ---
 
-## 🧩 Repository Structure
-
-```text
-DCWNet/
-├── assets/                  # Project assets
-├── checkpoints/             # Pretrained checkpoints
-├── datasets/                # Dataset root or symlinks
-├── figs/                    # Figures used in README
-├── models/                  # DCWNet architecture
-│   ├── dcwnet.py
-│   ├── codebook.py
-│   ├── fdwt.py
-│   └── modules.py
-├── losses/                  # Loss functions
-├── utils/                   # Data, metrics, visualization utilities
-├── train.py                 # Training script
-├── test.py                  # Paired evaluation script
-├── test_unpaired.py         # Unpaired evaluation script
-├── inference.py             # Inference script
-├── app.py                   # Optional Gradio demo
-├── dcwnet.yaml              # Conda environment
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
-
----
-
-## 📏 Troubleshooting
-
-- **CUDA / PyTorch mismatch**: Check that your GPU driver supports the CUDA runtime installed with PyTorch.
-- **Out of memory**: Reduce `--batch_size` or `--patch_size`.
-- **Dataset path error**: Ensure `low/` and `high/` folders follow the expected directory structure.
-- **Metric mismatch**: Verify that images are saved in the same color range and format as used during evaluation.
-- **Missing checkpoint**: Download the pretrained model and place it under `checkpoints/`.
-
----
 
 ## 💖 Acknowledgement
 
@@ -309,24 +272,10 @@ This repository is built upon the low-light image enhancement community and rela
 
 ---
 
-## 🤝 Citation
-
-If this work is helpful for your research, please cite:
-
-```bibtex
-@article{shi2026dcwnet,
-  title={DCWNet: Bridging Dual-Codebook Reconstruction and Wavelet Refinement for Low-Light Image Enhancement},
-  author={Shi, Kangbiao and He, Zhaokun and Doan, Anh-Dzung and Yan, Li and Yan, Qingsen},
-  journal={Manuscript},
-  year={2026}
-}
-```
-
 ---
 
 ## 🔆 Contact
 
 For questions, please open an issue or contact:
 
-- Kangbiao Shi: kangbiaoshi@mail.nwpu.edu.cn
-- Qingsen Yan: qingsenyan@nwpu.edu.cn
+- Kangbiao Shi: 18334840904@163.com
