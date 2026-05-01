@@ -187,10 +187,10 @@ Download our weights from [[Google Drive](https://drive.google.com/drive/folders
 python eval.py --lol
 
 # LOLv2-real
-python eval.py --lol_v2_real
+python eval.py --lolv2_real
 
 # LOLv2-syn
-python eval.py --lol_v2_syn
+python eval.py --lolv2_syn
 
 # SICE
 python eval.py --sice
@@ -200,7 +200,7 @@ python eval_SID.py
 
 # five unpaired datasets DICM, LIME, MEF, NPE, VV. 
 # You can change "--DICM" to the other unpaired datasets "LIME, MEF, NPE, VV".
-python eval_unpaired.py --unpaired --DICM
+python eval_unpaired.py
 ```
 
 </details>
