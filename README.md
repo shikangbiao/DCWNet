@@ -253,7 +253,7 @@ The training code will be uploaded soon.
 | Dataset | PSNR↑ | SSIM↑ |
 |---------|-------|-------|
 | SICE | **13.776** | **0.661** |
-| Sony-Total-Dark | **23.962** | **0.708** |
+| Sony-Total-Dark | **23.214** | **0.699** |
 
 ### Results on Unpaired Datasets
 
